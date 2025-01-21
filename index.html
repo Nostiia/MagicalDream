@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magical Dream</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      overflow: auto;
+      height: 100%;
+      margin: 0;
+      background: black;
+    }
+
+    .bed {
+      height: 70px; 
+      margin: -15px;
+      margin-left: -5px;
+    }
+
+    footer {
+      background-color: blanchedalmond;
+      color: black;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1rem;
+      margin-top: 50px;
+    }
+
+    .space {
+      padding-right: 3%;
+    }
+
+    .try{
+      background-color: black;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    main {
+      padding-top: 80px; 
+      background-color: rgba(0, 0, 0, 0);
+      color: rgba(0, 0, 0, 0);
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.588); 
+      color:black;
+    }
+
+    .carousel-item iframe {
+      width: 100%;
+      height: 450px;
+    }
+
+    .container{
+      color: rgba(0, 0, 0, 0);
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+  }
+
+
+.carousel-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand space" href="#Start">
+        <img class="bed" src="https://png.pngtree.com/png-vector/20231016/ourmid/pngtree-white-bed-isolated-png-image_10188965.png" alt="Bed">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#Bed">Comfortable Bed</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Sounds">Sounds</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Health">Health</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Lifehacks">Lifehacks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Places">Places for Best Dream</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="card text-white mb-3">
+        <div class="card-header text-center" id="Start">
+          <h2>Welcome to Magical Dream</h2>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            Discover the secrets to a perfect night's sleep with our carefully curated tips, tools, and resources. Whether you're looking for the most comfortable beds, soothing sounds, or the best places to dream, we've got you covered. Explore the magical world of restful nights and wake up feeling rejuvenated!
+          </p>
+          <h6>Helth - is the most magical Dream!</h6>
+        </div>
+      </div>
+
+      <div class="card mb-3" id="Bed">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://i5.walmartimages.com/asr/f0d2610a-b9c8-4d11-a480-ce95f1374d1c_3.79e0d7618ce55b418fcecedf70fd087b.jpeg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.tastefulspace.com/wp-content/uploads/2020/05/AdobeStock_315112933-scaled.jpeg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://th.bing.com/th/id/R.c661e61d006cc3ae92dbf637699048c7?rik=5Lwcm8Nk8urBbQ&riu=http%3a%2f%2fd9dvmj2a7k2dc.cloudfront.net%2fcatalog%2fproduct%2fcache%2f1%2fimage%2f9df78eab33525d08d6e5fb8d27136e95%2f1%2f5%2f150-br.jpg&ehk=tRGm56csCh6aZAFz5yN92g8GeQVJ7pX0Km6gGi9HFd0%3d&risl=&pid=ImgRaw&r=0" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Comfortable bed</h5>
+          <p class="card-text">First step to achive magical dreams is to get comfortable and anatomic bed. When you sleep in this kind of beds, you wake up in good mood and good self-feeling.</p>
+          <h6 class="card-title">Here is some tricks to select right bed</h6>
+          <div class="card-text"> 
+            <ul>
+              <li>Look for a mattress that supports your spine's natural alignment without sagging or being too firm.</li>
+              <li>Choose the firmness (soft, medium, or firm) based on your sleeping position:
+              <ul>
+                <li>Side sleepers: Softer for shoulder/hip support.</li>
+                <li>Back sleepers: Medium-firm for spinal alignment.</li>
+                <li>Stomach sleepers: Firmer to prevent sinking.</li></li>
+              </ul>
+              <li>If you sleep hot, opt for breathable materials like latex or mattresses with cooling technology.</li>
+              <li>For couples, choose a mattress with good motion isolation (like memory foam) to avoid disturbances.</li>
+              <li>Match your pillow height and firmness with your sleeping position to avoid neck pain.</li>
+              <li>Before buying lie down for at least 10-15 minutes in your typical sleeping position.</li>
+              <li>Choose a bed with a generous trial period (30–100 nights) and warranty (10+ years).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-white mb-3" id="Sounds">
+        <h1 class="text-center mb-4">Sounds</h1>
+        <div class="container mt-5">
+          <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#videoCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#videoCarousel" data-slide-to="1"></li>
+              <li data-target="#videoCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <iframe src="https://www.bing.com/videos/riverview/relatedvideo?&q=relax+music+video&qpvt=relax+music+video&mid=F199FB176C8313084737F199FB176C8313084737&&FORM=VRDGAR" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="carousel-item">
+                <iframe src="https://www.bing.com/videos/riverview/relatedvideo?&q=music+for+sleep+video&&mid=8EF7A24323A7652825338EF7A24323A765282533&&FORM=VRDGAR" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="carousel-item">
+                <iframe src="https://www.bing.com/videos/riverview/relatedvideo?&q=music+for+nervous+video&&mid=3DAD544B118D8CF7530E3DAD544B118D8CF7530E&&FORM=VRDGAR" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card text-white mb-3" id="Health">
+        <h1 class="text-center mb-4">Health</h1>
+      </div>
+      <div class="card text-white mb-3">
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Humans spend about one-third of their lives sleeping.</li>
+              <li>REM sleep is essential for dreaming and emotional regulation.</li>
+              <li>Sleep needs decrease with age but never fall below 6 hours.</li>
+              <li>A lack of REM sleep can impair memory and learning.</li>
+              <li>The longest recorded period without sleep is 11 days (not recommended and dangerous).</li>
+            </ul>            
+          </p>
+        </div>
+      </div>
+      
+      <div class="card text-white mb-3">
+        <h2 class="text-center mb-4">General Facts</h2>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="https://s35726.pcdn.co/wp-content/uploads/2017/07/sleep1-850x476.gif" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Recommended Sleep Duration</h5>
+            <p class="card-text">
+              <ul>
+              <li>Adults (18–64 years): 7–9 hours per night.</li>
+              <li>Teens (14–17 years): 8–10 hours per night.</li>
+              <li>Children (6–13 years): 9–11 hours per night.</li>
+              <li>Infants (4–11 months): 12–15 hours per day.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/1740/0017/files/stages-of-sleep-cycle_1024x1024.jpg?v=1598866076" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sleep Cycles</h5>
+            <p class="card-text">Sleep consists of 4 stages: 3 non-REM stages and 1 REM stage. A full sleep cycle lasts about 90–120 minutes and repeats 4–6 times a night.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://th.bing.com/th/id/R.89461650d5578a217c7359d8a142a209?rik=2sjd6T207xpU5w&pid=ImgRaw&r=0" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Circadian Rhythm</h5>
+            <p class="card-text">The body's internal clock regulates sleep and wakefulness. It's influenced by light exposure, meal timing, and other habits.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div class="card text-white mb-3">
+        <h2 class="text-center mb-4">Health Benefits of Sleep</h2>
+      </div>
+      
+      <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-block w-100">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="https://www.brainframe-kids.com/brain/images/s/facts-lobes.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Brain Function</h5>
+                    <p class="card-text">
+                      Enhances memory, learning, and decision-making. Improves problem-solving and creativity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://neurosciencenews.com/files/2023/07/immune-system-behavior-neuroscience.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Immune System</h5>
+                    <p class="card-text">Strengthens the immune response. Sleep deprivation increases susceptibility to illness.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://th.bing.com/th/id/R.4566c41e2bd44b33a0125aeb87f9fd0e?rik=ckemAD32TRcEOQ&riu=http%3a%2f%2falzheimersocietyblog.ca%2fwp-content%2fuploads%2fheart-health.jpg&ehk=31EQckBElmtctQDD%2ffAfkt3LVkpLBkddHaoSIKMGrOk%3d&risl=&pid=ImgRaw&r=0" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Heart Health</h5>
+                    <p class="card-text">Supports healthy blood pressure levels. Reduces the risk of heart disease and stroke.</p>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block w-100">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="https://media.self.com/photos/5ec6858e2f8816a44af9f56d/4:3/w_2560%2Cc_limit/GettyImages-1174870662.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Emotional Regulation</h5>
+                    <p class="card-text">
+                      Reduces stress, anxiety, and depression. Helps maintain emotional stability.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://images.everydayhealth.com/images/diet-nutrition/weight/essential-facts-about-metabolism-and-weight-loss-1440x810.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Metabolism and Weight Management</h5>
+                    <p class="card-text">Regulates appetite-controlling hormones (ghrelin and leptin). Lack of sleep can lead to overeating and weight gain.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://possiblemind.co.uk/wp-content/uploads/2016/08/recovery.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Physical Recovery</h5>
+                    <p class="card-text">Muscle repair and growth occur during deep sleep. Promotes faster recovery from injuries.</p>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>  
+      <div>
+        <p></p>
+      </div>
+      <div class="card text-white mb-3">
+        <h2 class="text-center mb-4">Sleep Disorders</h2>
+      </div>
+
+      <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-block w-100">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="https://www.mz-store.com/blog/wp-content/uploads_en/2020/11/shutterstock_1677335926-1024x731.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Insomnia</h5>
+                    <p class="card-text">
+                      Difficulty falling or staying asleep.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://www.fitpaa.com/wp-content/uploads/2023/10/Untitled-design-2023-10-11T184319.220-jpg.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Sleep Apnea</h5>
+                    <p class="card-text">Breathing stops and starts repeatedly during sleep.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://www.sleepfoundation.org/wp-content/uploads/2018/10/2r7bc60_SF_September_NonComm_RLS-B-1024x819.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Restless Legs Syndrome (RLS)</h5>
+                    <p class="card-text">An uncontrollable urge to move legs, usually in the evening.</p>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block w-100">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="https://th.bing.com/th/id/OIP.ZIpKyqruZOWv-jGJQGwunwHaHa?rs=1&pid=ImgDetMain" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Narcolepsy</h5>
+                    <p class="card-text">
+                      Sudden episodes of sleep during the day.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://www.sleepfoundation.org/wp-content/uploads/2023/01/Parasomnia_Graphic.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Parasomnias</h5>
+                    <p class="card-text">Abnormal behaviors during sleep (e.g., sleepwalking, night terrors).</p>
+                  </div>
+                </div>      
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div class="card text-white mb-3" id="Lifehacks">
+        <h1 class="text-center mb-4">Lifehacks</h1>
+      </div>
+      <div class="d-flex justify-content-center" style="gap: 10px;">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Create a Sleep-Conducive Environment</h5>
+            <p class="card-text">Keep your bedroom dark, quiet, and cool (65°F or 18°C is ideal). Use blackout curtains or an eye mask.</p>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Stick to a Schedule</h5>
+            <p class="card-text">Go to bed and wake up at the same time every day, even on weekends.</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Limit Screen Time</h5>
+            <p class="card-text">Avoid screens (phones, tablets, TVs) at least 1–2 hours before bed. Blue light suppresses melatonin production.</p>
+          </div>
+        </div>
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Diet and Hydration</h5>
+            <p class="card-text">Avoid heavy meals, caffeine, and alcohol close to bedtime. Stay hydrated but limit fluid intake in the evening.</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center" style="gap: 10px;">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Exercise Regularly</h5>
+            <p class="card-text">Physical activity promotes better sleep, but avoid intense exercise close to bedtime.</p>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Relaxation Techniques</h5>
+            <p class="card-text">Practice mindfulness, meditation, or deep breathing to reduce stress before bed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Limit Naps</h5>
+          <p class="card-text">If needed, limit naps to 20–30 minutes in the early afternoon.</p>
+        </div>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div class="card text-white mb-3" id="Places">
+        <h1 class="text-center mb-4">Places for Best Dream</h1>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="https://th.bing.com/th/id/R.51bfa400eed6f3c145874d76e8ada967?rik=XQOoCzTXoCjb9w&pid=ImgRaw&r=0" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Maldives</h5>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.bing.com/travel/hotel-search?q=maldives+resorts&cin=2024-12-29&cout=2024-12-30&guests=2A&rooms=1&displaytext=Maldives&loc=Maldives&sort=Popularity&type=hotel&mapBounds=5.313901%2C72.879425%2C3.5018442%2C73.67317&cacheId=b2f7e2c8-f2f9-42f9-9875-c53150f9a07b__d0d6b052-1e58-49fa-8094-2852ccb7d510__2__resorts&form=HTSELI&entrypoint=HTSELI" class="btn btn-primary try">Just try</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://www.propertyguides.com/spain/media/sites/4/Calella-de-Palafrugell-3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Spain</h5>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.bing.com/travel/hotel-search?q=hotels+in+spain&loc=Spain&cin=2024-12-29&cout=2024-12-30&guests=2A0C&age=&id=&displaytext=Spain+Hotels&form=HTSELI&entrypoint=HTSELI&lat=40.390123&lon=-3.5544&type=hotel" class="btn btn-primary try">Just try</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://journeyz.co/wp-content/uploads/2020/08/Bern-scaled.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Switherland</h5>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.bing.com/travel/hotel-search?q=hotels+in+switzerland&loc=Switzerland&cin=2024-12-29&cout=2024-12-30&guests=2A0C&age=&id=&displaytext=Switzerland&form=HTSELI&entrypoint=HTSELI&lat=46.801251&lon=8.231028&type=hotel" class="btn btn-primary try">Just try</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Made by Anastasiia Holubieva 2024</p>
+  </footer>
+  <script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const stars = [];
+    const numStars = 200;
+
+    function createStar() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2,
+        speed: Math.random() * 0.5 + 0.2,
+      };
+    }
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push(createStar());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'white';
+
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        star.y += star.speed;
+
+        if (star.y > canvas.height) {
+          star.x = Math.random() * canvas.width;
+          star.y = -star.radius;
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
